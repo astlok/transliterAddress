@@ -1,20 +1,15 @@
 package transliteParser
 
 import (
-	"fmt"
 	"transliterAdress/constants"
 )
 
 func TransliteAddress(name string, street string, city string, region string, index string, country string) string {
-	address := name + street +  city + region + index + country
+	address := name + street +  city + region + index
 	var resultAddress string
 	for _, char := range address {
-		if char > 1103 {
-			continue
-		}
-		kek := constants.MatchLetters[string((char))]
-		fmt.Println(kek)
 		resultAddress += constants.MatchLetters[string(char)]
 	}
+	resultAddress += constants.MatchLetters[country]
 	return resultAddress
 }

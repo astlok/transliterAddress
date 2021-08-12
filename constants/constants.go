@@ -79,4 +79,6 @@ var MatchLetters = map[string]string{
 	"7": "7",
 	"8": "8",
 	"9": "9",
+	"Россия\n": "Russia\n",
+	"россия\n": "Russia\n",
 }
